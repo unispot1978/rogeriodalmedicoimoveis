@@ -15,7 +15,7 @@
 .properties{padding:52px 5%;border-top:1px solid #1c3448}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:22px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--blue)}.section-head h2{font:400 30px Georgia,serif;margin:7px 0 0}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
 .card{display:flex;flex-direction:column;background:#061c30;border:1px solid #35536b;min-height:100%;overflow:hidden}.photo{position:relative;display:block;height:205px;background:#0b263d;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block}.code{position:absolute;left:9px;top:9px;background:#03182b;padding:5px 7px;font-size:10px;letter-spacing:.7px}
-.body{display:flex;flex-direction:column;flex:1;padding:14px}.body h3{font:400 18px Georgia,serif;line-height:1.2;margin:0 0 8px}.loc{font-size:12px;color:#c5d0d8;margin:0 0 8px}.spec{font-size:12px;line-height:1.5;margin:0 0 9px}.price{font:400 20px Georgia,serif;color:#fff;margin:3px 0 12px}.open{display:inline-block;align-self:flex-start;border:1px solid #6e8ba1;padding:9px 12px;font-size:11px;letter-spacing:.7px}.open:hover{border-color:var(--blue)}
+.body{display:flex;flex-direction:column;flex:1;padding:14px}.body h3{font:400 18px Georgia,serif;line-height:1.2;margin:0 0 8px}.loc{font-size:12px;color:#c5d0d8;margin:0 0 8px}.spec{font-size:12px;line-height:1.5;margin:0 0 9px}.price{font:400 20px Georgia,serif;color:#fff;margin:3px 0 12px}.open{display:inline-flex;align-items:center;justify-content:center;border:1px solid #6e8ba1;padding:9px 12px;font-size:11px;letter-spacing:.7px}.open:hover{border-color:var(--blue)}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.interest{display:inline-flex;align-items:center;justify-content:center;background:var(--green);padding:9px 10px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;text-align:center}.interest:hover{filter:brightness(1.05)}
 .cta{margin:20px 5% 50px;padding:28px 32px;border:1px solid #315069;background:#08243d;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h3{font:400 25px Georgia,serif;margin:0 0 8px}.cta p{margin:0;color:#c3ccd3}.wa{background:var(--green);padding:13px 18px;border-radius:6px;font-weight:700;white-space:nowrap}
 footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#dce3e8}footer .brand{font:400 18px Georgia,serif}footer .brand small{display:block;font:10px Arial;letter-spacing:1.6px;margin-top:5px}footer .links{display:flex;align-items:center;gap:22px}.ig{color:#E1306C;font-weight:700}
 @media(max-width:1050px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -34,7 +34,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <body>
 <section class="hero">
 <img alt="Rogério Dal Médico - Consultoria Imobiliária" src="assets/hero.png"/>
-<a aria-label="Falar com Rogério pelo WhatsApp" class="hero-wa" href="https://wa.me/5514981566949?text=Olá%20Rogério,%20vim%20pelo%20seu%20site." rel="noopener" target="_blank"></a>
+<a aria-label="Falar com Rogério pelo WhatsApp" class="hero-wa" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vim%20pelo%20seu%20site%20e%20estou%20procurando%20um%20im%C3%B3vel%20para%20comprar.%20Pode%20me%20ajudar%3F" rel="noopener" target="_blank"></a>
 </section>
 <section class="services">
 <div class="service"><div class="ico">⌂</div><h3>COMPRA E VENDA</h3><p>Seleção criteriosa de imóveis para morar ou investir com segurança e discrição.</p></div>
@@ -59,7 +59,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 7 banheiros · 8 vagas · 500 m²</p>
 <div class="price">R$ 9.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg0OTUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg0OTUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Residencial%20Lago%20Sul%20%28c%C3%B3d.%208495%29%2C%20em%20Bauru/SP%2C%20por%20R%24%209.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Residencial Lago Sul">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -72,7 +72,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 3 vagas · 900 m²</p>
 <div class="price">R$ 7.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk0MDMmZmxhZ19tb3N0cmE9MSZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk0MDMmZmxhZ19tb3N0cmE9MSZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Lago%20Sul%20%28c%C3%B3d.%209403%29%2C%20em%20Bauru/SP%2C%20por%20R%24%207.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Lago Sul">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -85,7 +85,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 7 banheiros · 6 vagas · 460 m²</p>
 <div class="price">R$ 6.700.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg1MTEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg1MTEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Resid%C3%AAncia%20de%20alt%C3%ADssimo%20padr%C3%A3o%20%28c%C3%B3d.%208511%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%206.700.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Residência de altíssimo padrão">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -98,7 +98,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 5 banheiros · 3 vagas · 500 m²</p>
 <div class="price">R$ 5.500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk0NzMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk0NzMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Lago%20Sul%20%28c%C3%B3d.%209473%29%2C%20em%20Bauru/SP%2C%20por%20R%24%205.500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Lago Sul">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -111,7 +111,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 6 banheiros · 5 vagas · 426 m²</p>
 <div class="price">R$ 4.430.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTEzOTEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTEzOTEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Resid%C3%AAncia%20Lago%20Sul%20em%20lote%20duplo%20%28c%C3%B3d.%201391%29%2C%20em%20Bauru/SP%2C%20por%20R%24%204.430.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Residência Lago Sul em lote duplo">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -124,7 +124,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 5 banheiros · 3 vagas · 356 m²</p>
 <div class="price">R$ 3.750.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1MzcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1MzcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa/Sobrado%20no%20Residencial%20Lago%20Sul%20%28c%C3%B3d.%209537%29%2C%20em%20Bauru/SP%2C%20por%20R%24%203.750.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa/Sobrado no Residencial Lago Sul">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -137,7 +137,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 3 vagas · 601,20 m²</p>
 <div class="price">R$ 3.100.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1OTQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1OTQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Villa%20Dumont%20%28c%C3%B3d.%209594%29%2C%20em%20Bauru/SP%2C%20por%20R%24%203.100.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Villa Dumont">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -150,7 +150,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 5 banheiros · 3 vagas · 220 m²</p>
 <div class="price">R$ 2.950.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQzODgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQzODgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Villaggio%20II%20%28c%C3%B3d.%204388%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.950.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Villaggio II">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -163,7 +163,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 2 vagas · 265 m²</p>
 <div class="price">R$ 2.950.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYzNDMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYzNDMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Cyrela%20Estoril%20%28c%C3%B3d.%206343%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.950.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Cyrela Estoril">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -176,7 +176,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 3 vagas · 240 m²</p>
 <div class="price">R$ 2.900.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYyNTgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYyNTgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Condom%C3%ADnio%20Cyrela%20Estoril%20%28c%C3%B3d.%206258%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.900.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Condomínio Cyrela Estoril">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -189,7 +189,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 4 vagas · 350 m²</p>
 <div class="price">R$ 2.800.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQzMzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQzMzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20de%20alto%20padr%C3%A3o%20no%20Spazio%20Verde%20%28c%C3%B3d.%204338%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%202.800.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa de alto padrão no Spazio Verde">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -202,7 +202,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">5 dorm. · 1 suíte · 3 banheiros · 2 vagas · 360 m²</p>
 <div class="price">R$ 2.650.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTU1MTQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTU1MTQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Samambaia%20Parque%20Residencial%20%28c%C3%B3d.%205514%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%202.650.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Samambaia Parque Residencial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -215,7 +215,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 3 vagas · 250 m²</p>
 <div class="price">R$ 2.600.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTIzNDkmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTIzNDkmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Lago%20Sul%20%28c%C3%B3d.%202349%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.600.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Lago Sul">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -228,7 +228,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 2 vagas · 315 m²</p>
 <div class="price">R$ 2.600.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg1ODMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg1ODMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20Villa%20Dumont%20%28c%C3%B3d.%208583%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.600.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa Villa Dumont">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -241,7 +241,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 6 banheiros · 4 vagas · 336 m²</p>
 <div class="price">R$ 2.500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTE3NjEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTE3NjEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Villa%20Dumont%20%28c%C3%B3d.%201761%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Villa Dumont">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -254,7 +254,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 6 banheiros · 4 vagas · 346 m²</p>
 <div class="price">R$ 2.500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTMyMzQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTMyMzQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20com%204%20quartos%20e%204%20su%C3%ADtes%20%28c%C3%B3d.%203234%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%202.500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa com 4 quartos e 4 suítes">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -267,7 +267,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 5 banheiros · 2 vagas · 485 m²</p>
 <div class="price">R$ 2.500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTU3MDgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTU3MDgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Villa%20Lobos%20%28c%C3%B3d.%205708%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Villa Lobos">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -280,7 +280,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 2 vagas · 260 m²</p>
 <div class="price">R$ 1.900.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTM3OTcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTM3OTcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Condom%C3%ADnio%20Spazio%20Verde%20Comendador%20%28c%C3%B3d.%203797%29%2C%20em%20Bauru/SP%2C%20por%20R%24%201.900.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Condomínio Spazio Verde Comendador">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -293,7 +293,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Agudos/SP</p>
 <p class="spec">4 dorm. · 2 suítes · 3 banheiros · 6 vagas · 320 m²</p>
 <div class="price">R$ 1.850.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTY2NzImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTY2NzImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Recanto%20dos%20Nobres%20II%20%28c%C3%B3d.%206672%29%2C%20em%20Agudos/SP%2C%20por%20R%24%201.850.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Recanto dos Nobres II">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -306,7 +306,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 1 vaga · 218 m²</p>
 <div class="price">R$ 1.800.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ3ODMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ3ODMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Condom%C3%ADnio%20Tambor%C3%A9%20%28c%C3%B3d.%204783%29%2C%20em%20Bauru/SP%2C%20por%20R%24%201.800.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Condomínio Tamboré">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -319,7 +319,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Colonial - Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 3 vagas · 277,45 m²</p>
 <div class="price">R$ 1.800.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc4MzYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc4MzYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Jardim%20Colonial%20%28c%C3%B3d.%207836%29%2C%20em%20Jardim%20Colonial%20-%20Bauru/SP%2C%20por%20R%24%201.800.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Jardim Colonial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -332,7 +332,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 4 banheiros · 2 vagas · 320 m²</p>
 <div class="price">R$ 1.500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1NzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1NzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Samambaia%20Parque%20Residencial%20%28c%C3%B3d.%209578%29%2C%20em%20Bauru/SP%2C%20por%20R%24%201.500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Samambaia Parque Residencial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -345,7 +345,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Piratininga/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 2 vagas · 182,56 m²</p>
 <div class="price">R$ 1.300.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ4NzUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ4NzUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Villa%20de%20Le%C3%B3n%202%20%28c%C3%B3d.%204875%29%2C%20em%20Piratininga/SP%2C%20por%20R%24%201.300.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Villa de León 2">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -358,7 +358,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Piratininga/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 4 vagas · 194 m²</p>
 <div class="price">R$ 1.300.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg1ODEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg1ODEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Morada%20do%20Sol%20%28c%C3%B3d.%208581%29%2C%20em%20Piratininga/SP%2C%20por%20R%24%201.300.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Morada do Sol">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -371,7 +371,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 2 suítes · 3 banheiros · 2 vagas · 187 m²</p>
 <div class="price">R$ 780.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYzNzYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYzNzYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Jardim%20Terra%20Branca%20%28c%C3%B3d.%206376%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20780.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Jardim Terra Branca">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -384,7 +384,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Independência - Bauru/SP</p>
 <p class="spec">5 dorm. · 2 suítes · 4 banheiros · 3 vagas · 280 m²</p>
 <div class="price">R$ 690.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgzNTcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgzNTcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20com%205%20quartos%20para%20venda%20%28c%C3%B3d.%208357%29%2C%20em%20Vila%20Independ%C3%AAncia%20-%20Bauru/SP%2C%20por%20R%24%20690.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa com 5 quartos para venda">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -397,7 +397,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim América - Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 3 banheiros · 4 vagas · 200,29 m²</p>
 <div class="price">R$ 650.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgwNjMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgwNjMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Jardim%20Am%C3%A9rica%20%28c%C3%B3d.%208063%29%2C%20em%20Jardim%20Am%C3%A9rica%20-%20Bauru/SP%2C%20por%20R%24%20650.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Jardim América">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -410,7 +410,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vargem Limpa I - Bauru/SP</p>
 <p class="spec">2 dorm. · 1 banheiro · 2 vagas · 45 m²</p>
 <div class="price">R$ 380.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgzNjAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgzNjAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Condom%C3%ADnio%20Vargem%20Limpa%20%28c%C3%B3d.%208360%29%2C%20em%20Vargem%20Limpa%20I%20-%20Bauru/SP%2C%20por%20R%24%20380.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Condomínio Vargem Limpa">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -423,7 +423,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 6 banheiros · 3 vagas · 345 m²</p>
 <div class="price">Consulte o valor</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTExODImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTExODImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20no%20Residencial%20Villa%20Dumont%20%28c%C3%B3d.%201182%29%2C%20em%20Bauru/SP%2C%20por%20Consulte%20o%20valor%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa no Residencial Villa Dumont">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -436,7 +436,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 2 vagas · 295 m²</p>
 <div class="price">Consulte o valor</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTM2NzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTM2NzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20t%C3%A9rrea%20no%20Villa%20Dumont%20%28c%C3%B3d.%203678%29%2C%20em%20Bauru/SP%2C%20por%20Consulte%20o%20valor%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa térrea no Villa Dumont">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -449,7 +449,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 4 vagas · 390 m²</p>
 <div class="price">Locação R$ 29.000/mês</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ3MDImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ3MDImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Casa%20Alto%20Padr%C3%A3o%20no%20Residencial%20Lago%20Sul%20%28c%C3%B3d.%204702%29%2C%20em%20Bauru/SP%2C%20por%20Loca%C3%A7%C3%A3o%20R%24%2029.000/m%C3%AAs%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Casa Alto Padrão no Residencial Lago Sul">WHATSAPP</a></div>
 </div>
 </article></div>
 </section>
@@ -466,7 +466,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">4 dorm. · 4 suítes · 7 banheiros · 4 vagas · 380 m²</p>
 <div class="price">R$ 4.500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTczNTgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTczNTgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20com%204%20su%C3%ADtes%20%28c%C3%B3d.%207358%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%204.500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento com 4 suítes">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -479,7 +479,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 4 banheiros · 3 vagas · 245 m²</p>
 <div class="price">R$ 2.890.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTczOTQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTczOTQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20na%20Vila%20Avia%C3%A7%C3%A3o%20%28c%C3%B3d.%207394%29%2C%20em%20Bauru/SP%2C%20por%20R%24%202.890.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento na Vila Aviação">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -492,7 +492,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 3 vagas · 183 m²</p>
 <div class="price">R$ 2.300.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ3MzImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ3MzImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20Edif%C3%ADcio%20C%C3%B3rsega%20%28c%C3%B3d.%204732%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%202.300.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento Edifício Córsega">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -505,7 +505,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">3 dorm. · 3 suítes · 5 banheiros · 2 vagas · 120 m²</p>
 <div class="price">R$ 1.300.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTE2NDcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTE2NDcmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Vivaz%20Home%20Resort%20%28c%C3%B3d.%201647%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%201.300.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Vivaz Home Resort">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -518,7 +518,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Estoril IV - Bauru/SP</p>
 <p class="spec">2 dorm. · 2 suítes · 3 banheiros · 2 vagas · 229 m²</p>
 <div class="price">R$ 1.190.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc3NDAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc3NDAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20City%20Towers%20%28c%C3%B3d.%207740%29%2C%20em%20Jardim%20Estoril%20IV%20-%20Bauru/SP%2C%20por%20R%24%201.190.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento City Towers">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -531,7 +531,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Parque Jardim Europa - Bauru/SP</p>
 <p class="spec">3 dorm. · 2 suítes · 3 banheiros · 2 vagas · 98,35 m²</p>
 <div class="price">R$ 1.100.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ4ODMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTQ4ODMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Trebbiano%20%28c%C3%B3d.%204883%29%2C%20em%20Parque%20Jardim%20Europa%20-%20Bauru/SP%2C%20por%20R%24%201.100.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Trebbiano">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -544,7 +544,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Altinópolis - Bauru/SP</p>
 <p class="spec">4 dorm. · 1 suíte · 4 banheiros · 2 vagas · 284 m²</p>
 <div class="price">R$ 1.100.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgyMTYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgyMTYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Cobertura%20pr%C3%B3xima%20%C3%A0%20USP%20%28c%C3%B3d.%208216%29%2C%20em%20Vila%20Altin%C3%B3polis%20-%20Bauru/SP%2C%20por%20R%24%201.100.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Cobertura próxima à USP">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -557,7 +557,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Paulista - Bauru/SP</p>
 <p class="spec">2 dorm. · 1 suíte · 2 banheiros · 1 vaga · 77 m²</p>
 <div class="price">R$ 890.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTY2NTAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTY2NTAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20City%20Towers%20One%20%28c%C3%B3d.%206650%29%2C%20em%20Jardim%20Paulista%20-%20Bauru/SP%2C%20por%20R%24%20890.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre City Towers One">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -570,7 +570,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Mariana - Bauru/SP</p>
 <p class="spec">3 dorm. · 2 suítes · 3 banheiros · 2 vagas · 89 m²</p>
 <div class="price">R$ 850.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTMzMTAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTMzMTAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20com%203%20dormit%C3%B3rios%20%28c%C3%B3d.%203310%29%2C%20em%20Vila%20Mariana%20-%20Bauru/SP%2C%20por%20R%24%20850.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento com 3 dormitórios">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -583,7 +583,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 3 banheiros · 2 vagas · 85 m²</p>
 <div class="price">R$ 850.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTUxNDEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTUxNDEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20no%20DUO%20%28c%C3%B3d.%205141%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%20850.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento no DUO">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -596,7 +596,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Parque Jardim Europa - Bauru/SP</p>
 <p class="spec">2 dorm. · 2 suítes · 3 banheiros · 2 vagas · 98 m²</p>
 <div class="price">R$ 850.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg0NzQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg0NzQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Residencial%20Trebbiano%20%28c%C3%B3d.%208474%29%2C%20em%20Parque%20Jardim%20Europa%20-%20Bauru/SP%2C%20por%20R%24%20850.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Residencial Trebbiano">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -609,7 +609,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Contorno - Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 2 banheiros · 2 vagas · 90 m²</p>
 <div class="price">R$ 800.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk2MDQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk2MDQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Edif%C3%ADcio%20Infinity%20Residence%20%28c%C3%B3d.%209604%29%2C%20em%20Jardim%20Contorno%20-%20Bauru/SP%2C%20por%20R%24%20800.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Edifício Infinity Residence">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -622,7 +622,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Infante Dom Henrique - Bauru/SP</p>
 <p class="spec">2 dorm. · 1 suíte · 2 banheiros · 2 vagas · 70 m²</p>
 <div class="price">R$ 795.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTE1OCZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTE1OCZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Mont%20Blanc%20Residencial%20%28c%C3%B3d.%20158%29%2C%20em%20Jardim%20Infante%20Dom%20Henrique%20-%20Bauru/SP%2C%20por%20R%24%20795.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Mont Blanc Residencial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -635,7 +635,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">2 dorm. · 1 suíte · 2 banheiros · 1 vaga · 64 m²</p>
 <div class="price">R$ 645.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwNzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwNzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Apartamento%20no%20Jardim%20Auri%20Verde%20%28c%C3%B3d.%209078%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20645.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Apartamento no Jardim Auri Verde">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -648,7 +648,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Estoril - Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 2 banheiros · 2 vagas · 71,35 m²</p>
 <div class="price">R$ 500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1ODUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1ODUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Condom%C3%ADnio%20Las%20Palmas%20%28c%C3%B3d.%209585%29%2C%20em%20Jardim%20Estoril%20-%20Bauru/SP%2C%20por%20R%24%20500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Condomínio Las Palmas">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -661,7 +661,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Nasralla - Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 3 banheiros · 2 vagas · 92 m²</p>
 <div class="price">R$ 450.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc5MDEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc5MDEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Residencial%20Cedro%20%28c%C3%B3d.%207901%29%2C%20em%20Jardim%20Nasralla%20-%20Bauru/SP%2C%20por%20R%24%20450.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Residencial Cedro">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -674,7 +674,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 2 banheiros · 2 vagas · 69,20 m²</p>
 <div class="price">R$ 440.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg3MTgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg3MTgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Residencial%20Parque%20Granja%20Cec%C3%ADlia%20B%20%28c%C3%B3d.%208718%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20440.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Residencial Parque Granja Cecília B">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -687,7 +687,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Cidade Universitária - Bauru/SP</p>
 <p class="spec">3 dorm. · 1 suíte · 3 banheiros · 3 vagas · 220 m²</p>
 <div class="price">Consulte o valor</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc0ODYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTc0ODYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Cobertura%20Residencial%20Ebel%20%28c%C3%B3d.%207486%29%2C%20em%20Vila%20Cidade%20Universit%C3%A1ria%20-%20Bauru/SP%2C%20por%20Consulte%20o%20valor%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Cobertura Residencial Ebel">WHATSAPP</a></div>
 </div>
 </article></div>
 </section>
@@ -704,7 +704,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">78.000 m²</p>
 <div class="price">R$ 12.250.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTMwNCZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTMwNCZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20%C3%81rea%20no%20Parque%20Colina%20Verde%20%28c%C3%B3d.%20304%29%2C%20em%20Bauru/SP%2C%20por%20R%24%2012.250.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Área no Parque Colina Verde">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -717,7 +717,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Agudos/SP</p>
 <p class="spec">2.000 m²</p>
 <div class="price">R$ 500.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgyMzkmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgyMzkmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20no%20Recanto%20dos%20Nobres%20II%20%28c%C3%B3d.%208239%29%2C%20em%20Agudos/SP%2C%20por%20R%24%20500.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno no Recanto dos Nobres II">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -730,7 +730,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">511,17 m²</p>
 <div class="price">R$ 330.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYzODQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYzODQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20no%20Jardim%20Aeroporto%20%28c%C3%B3d.%206384%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20330.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno no Jardim Aeroporto">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -743,7 +743,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">416 m²</p>
 <div class="price">R$ 320.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTEzNzAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTEzNzAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20no%20Tambor%C3%A9%20%28c%C3%B3d.%201370%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20320.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno no Tamboré">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -756,7 +756,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">600 m²</p>
 <div class="price">R$ 300.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg5NzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg5NzgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20no%20Condom%C3%ADnio%20Primavera%20%28c%C3%B3d.%208978%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20300.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno no Condomínio Primavera">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -769,7 +769,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Piratininga/SP</p>
 <p class="spec">300 m²</p>
 <div class="price">R$ 230.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkxNjEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkxNjEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20no%20Residencial%20Villa%20de%20Le%C3%B3n%20%28c%C3%B3d.%209161%29%2C%20em%20Piratininga/SP%2C%20por%20R%24%20230.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno no Residencial Villa de León">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -782,7 +782,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Piratininga/SP</p>
 <p class="spec">450 m²</p>
 <div class="price">R$ 205.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwODYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwODYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20no%20Morada%20do%20Sol%20%28c%C3%B3d.%209086%29%2C%20em%20Piratininga/SP%2C%20por%20R%24%20205.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno no Morada do Sol">WHATSAPP</a></div>
 </div>
 </article></div>
 </section>
@@ -799,7 +799,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Centro - Bauru/SP</p>
 <p class="spec">5 vagas · 404,62 m²</p>
 <div class="price">R$ 2.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk2MTMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk2MTMmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Im%C3%B3vel%20comercial%20e%20residencial%20%28c%C3%B3d.%209613%29%2C%20em%20Centro%20-%20Bauru/SP%2C%20por%20R%24%202.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Imóvel comercial e residencial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -812,7 +812,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Aviação - Bauru/SP</p>
 <p class="spec">1 banheiro · 75 m²</p>
 <div class="price">R$ 1.100.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgzMDAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTgzMDAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Loja%20no%20Pluri%20Working%20%28c%C3%B3d.%208300%29%2C%20em%20Vila%20Avia%C3%A7%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%201.100.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Loja no Pluri Working">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -825,7 +825,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Centro - Bauru/SP</p>
 <p class="spec">5 banheiros · 20 vagas · 440 m²</p>
 <div class="price">R$ 750.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTUyMSZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTUyMSZpZF9jb3JyZXRvcj0yNg==" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Galp%C3%A3o%20comercial%20%28c%C3%B3d.%20521%29%2C%20em%20Centro%20-%20Bauru/SP%2C%20por%20R%24%20750.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Galpão comercial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -838,7 +838,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Cardia - Bauru/SP</p>
 <p class="spec">1 banheiro · 4 vagas · 283,50 m²</p>
 <div class="price">R$ 700.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg0MzYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg0MzYmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Barrac%C3%A3o%20comercial%20%28c%C3%B3d.%208436%29%2C%20em%20Vila%20Cardia%20-%20Bauru/SP%2C%20por%20R%24%20700.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Barracão comercial">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -851,7 +851,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Parque Paulistano - Bauru/SP</p>
 <p class="spec">484 m²</p>
 <div class="price">R$ 550.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1MzkmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTk1MzkmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Terreno%20comercial%20para%20barrac%C3%A3o%20%28c%C3%B3d.%209539%29%2C%20em%20Parque%20Paulistano%20-%20Bauru/SP%2C%20por%20R%24%20550.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Terreno comercial para barracão">WHATSAPP</a></div>
 </div>
 </article></div>
 </section>
@@ -868,7 +868,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Miranda/MS</p>
 <p class="spec">3 dorm. · 18.170.000 m²</p>
 <div class="price">R$ 37.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNjQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNjQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Fazenda%20com%201.817%20hectares%20%28c%C3%B3d.%209264%29%2C%20em%20Miranda/MS%2C%20por%20R%24%2037.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Fazenda com 1.817 hectares">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -881,7 +881,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Água Clara/MS</p>
 <p class="spec">7.744.000 m²</p>
 <div class="price">R$ 32.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTczOTUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTczOTUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Fazenda%20com%20320%20alqueires%20%28c%C3%B3d.%207395%29%2C%20em%20%C3%81gua%20Clara/MS%2C%20por%20R%24%2032.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Fazenda com 320 alqueires">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -894,7 +894,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Guairaçá/PR</p>
 <p class="spec">4.065.600 m²</p>
 <div class="price">R$ 32.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNzEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNzEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Fazenda%20com%20168%20alqueires%20%28c%C3%B3d.%209271%29%2C%20em%20Guaira%C3%A7%C3%A1/PR%2C%20por%20R%24%2032.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Fazenda com 168 alqueires">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -907,7 +907,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vera Cruz/SP</p>
 <p class="spec">4.936.800 m²</p>
 <div class="price">R$ 30.600.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwODgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwODgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Fazenda%20de%20204%20alqueires%20%28c%C3%B3d.%209088%29%2C%20em%20Vera%20Cruz/SP%2C%20por%20R%24%2030.600.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Fazenda de 204 alqueires">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -920,7 +920,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Agudos/SP</p>
 <p class="spec">4 suítes · 20.000 m²</p>
 <div class="price">R$ 2.900.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg4NjAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg4NjAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Ch%C3%A1cara%20com%2020.000%20m%C2%B2%20%28c%C3%B3d.%208860%29%2C%20em%20Agudos/SP%2C%20por%20R%24%202.900.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Chácara com 20.000 m²">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -933,7 +933,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Itaju/SP</p>
 <p class="spec">224.300 m²</p>
 <div class="price">R$ 2.900.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg5NzUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTg5NzUmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20S%C3%ADtio%20em%20Itaju%20%28c%C3%B3d.%208975%29%2C%20em%20Itaju/SP%2C%20por%20R%24%202.900.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Sítio em Itaju">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -946,7 +946,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Piraju/SP</p>
 <p class="spec">18.100 m²</p>
 <div class="price">R$ 2.000.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkxMzQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkxMzQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Ch%C3%A1cara%20com%2018.100%20m%C2%B2%20%28c%C3%B3d.%209134%29%2C%20em%20Piraju/SP%2C%20por%20R%24%202.000.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Chácara com 18.100 m²">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -959,7 +959,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Serra Negra/SP</p>
 <p class="spec">4 dorm. · 2 suítes · 3 banheiros · 3.000 m²</p>
 <div class="price">R$ 1.900.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYwMjQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTYwMjQmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Propriedade%20em%20Serra%20Negra%20%28c%C3%B3d.%206024%29%2C%20em%20Serra%20Negra/SP%2C%20por%20R%24%201.900.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Propriedade em Serra Negra">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -972,7 +972,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Vila Serrão - Bauru/SP</p>
 <p class="spec">4 dorm. · 7.350 m²</p>
 <div class="price">R$ 1.400.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNjEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNjEmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Ch%C3%A1cara%20com%207.350%20m%C2%B2%20%28c%C3%B3d.%209261%29%2C%20em%20Vila%20Serr%C3%A3o%20-%20Bauru/SP%2C%20por%20R%24%201.400.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Chácara com 7.350 m²">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -985,7 +985,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Jardim Imperial - Bauru/SP</p>
 <p class="spec">3 dorm. · 5.000 m²</p>
 <div class="price">R$ 1.200.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNjImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkyNjImaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Ch%C3%A1cara%20com%205.000%20m%C2%B2%20%28c%C3%B3d.%209262%29%2C%20em%20Jardim%20Imperial%20-%20Bauru/SP%2C%20por%20R%24%201.200.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Chácara com 5.000 m²">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -998,7 +998,7 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Bauru/SP</p>
 <p class="spec">2 dorm. · 28.000 m²</p>
 <div class="price">R$ 650.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTY1ODAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTY1ODAmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Ch%C3%A1cara%20%C3%81gua%20da%20Faca%20%28c%C3%B3d.%206580%29%2C%20em%20Bauru/SP%2C%20por%20R%24%20650.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Chácara Água da Faca">WHATSAPP</a></div>
 </div>
 </article>
 <article class="card">
@@ -1011,19 +1011,19 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
 <p class="loc">Arealva/SP</p>
 <p class="spec">4 dorm. · 3 banheiros · 1.100 m²</p>
 <div class="price">R$ 380.000</div>
-<a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwNjgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a>
+<div class="card-actions"><a class="open" href="https://www.mfximobiliaria.com.br/ksi/clientes/publico/imoveis-integra.php?p=Y29kaWdvPTkwNjgmaWRfY29ycmV0b3I9MjY=" rel="noopener noreferrer" target="_blank">VER IMÓVEL →</a><a class="interest" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vi%20no%20seu%20site%20o%20im%C3%B3vel%20Ch%C3%A1cara%20Beira%20do%20Rio%20%28c%C3%B3d.%209068%29%2C%20em%20Arealva/SP%2C%20por%20R%24%20380.000%2C%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre Chácara Beira do Rio">WHATSAPP</a></div>
 </div>
 </article></div>
 </section>
 <section class="cta">
 <div><h3>Encontrou o seu imóvel ideal?</h3><p>Fale comigo para receber atendimento personalizado ou agendar uma visita.</p></div>
-<a class="wa" href="https://wa.me/5514981566949?text=Olá%20Rogério,%20quero%20falar%20sobre%20um%20imóvel." rel="noopener" target="_blank">WhatsApp · (14) 98156-6949</a>
+<a class="wa" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Estou%20procurando%20um%20im%C3%B3vel%20para%20comprar%20e%20gostaria%20de%20conhecer%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis." rel="noopener" target="_blank">WhatsApp · (14) 98156-6949</a>
 </section>
 <footer>
 <div class="brand">ROGÉRIO DAL MÉDICO<small>CONSULTORIA IMOBILIÁRIA · CRECI 138826</small></div>
 <div class="links">
 <a class="ig" href="https://www.instagram.com/rogeriodalmedicoimoveis/" rel="noopener" target="_blank">◎ @rogeriodalmedicoimoveis</a>
-<a class="wa" href="https://wa.me/5514981566949" rel="noopener" target="_blank">WhatsApp · (14) 98156-6949</a>
+<a class="wa" href="https://wa.me/5514981566949?text=Ol%C3%A1%2C%20Rog%C3%A9rio.%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20um%20im%C3%B3vel." rel="noopener" target="_blank">WhatsApp · (14) 98156-6949</a>
 </div>
 </footer>
 </body></html>
