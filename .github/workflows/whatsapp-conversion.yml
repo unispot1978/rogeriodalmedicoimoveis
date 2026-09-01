@@ -1,0 +1,102 @@
+name: Aplicar conversao WhatsApp
+
+on:
+  push:
+    paths:
+      - '.github/workflows/whatsapp-conversion.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Adicionar WhatsApp contextual aos imoveis
+        shell: python
+        run: |
+          from pathlib import Path
+          from urllib.parse import quote
+          import re
+
+          path = Path('index.html')
+          html = path.read_text(encoding='utf-8')
+
+          if 'class="interest"' in html:
+              print('WhatsApp contextual ja aplicado; nenhuma alteracao necessaria.')
+              raise SystemExit(0)
+
+          old_css = '.open{display:inline-block;align-self:flex-start;border:1px solid #6e8ba1;padding:9px 12px;font-size:11px;letter-spacing:.7px}.open:hover{border-color:var(--blue)}'
+          new_css = '.open{display:inline-flex;align-items:center;justify-content:center;border:1px solid #6e8ba1;padding:9px 12px;font-size:11px;letter-spacing:.7px}.open:hover{border-color:var(--blue)}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.interest{display:inline-flex;align-items:center;justify-content:center;background:var(--green);padding:9px 10px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;text-align:center}.interest:hover{filter:brightness(1.05)}'
+          if old_css not in html:
+              raise RuntimeError('Trecho CSS esperado nao encontrado; site nao foi alterado.')
+          html = html.replace(old_css, new_css, 1)
+
+          phone = '5514981566949'
+          card_re = re.compile(r'<article class="card">.*?</article>', re.S)
+
+          def convert_card(match):
+              card = match.group(0)
+              title_m = re.search(r'<h3>(.*?)</h3>', card, re.S)
+              code_m = re.search(r'<span class="code">CÓD\.\s*([^<]+)</span>', card)
+              loc_m = re.search(r'<p class="loc">(.*?)</p>', card, re.S)
+              price_m = re.search(r'<div class="price">(.*?)</div>', card, re.S)
+              open_m = re.search(r'(<a class="open" href="[^"]+"[^>]*>VER IMÓVEL →</a>)', card)
+              if not (title_m and open_m):
+                  return card
+
+              clean = lambda s: re.sub(r'<[^>]+>', '', s).strip()
+              title = clean(title_m.group(1))
+              code = clean(code_m.group(1)) if code_m else ''
+              loc = clean(loc_m.group(1)) if loc_m else ''
+              price = clean(price_m.group(1)) if price_m else ''
+
+              msg = f'Olá, Rogério. Vi no seu site o imóvel {title}'
+              if code:
+                  msg += f' (cód. {code})'
+              if loc:
+                  msg += f', em {loc}'
+              if price:
+                  msg += f', por {price}'
+              msg += ', e gostaria de mais informações.'
+              wa_url = f'https://wa.me/{phone}?text={quote(msg)}'
+              wa = f'<a class="interest" href="{wa_url}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp sobre {title}">WHATSAPP</a>'
+              actions = f'<div class="card-actions">{open_m.group(1)}{wa}</div>'
+              return card[:open_m.start()] + actions + card[open_m.end():]
+
+          html, count = card_re.subn(convert_card, html)
+          if count != 73:
+              raise RuntimeError(f'Esperados 73 cards; encontrados {count}. Site nao foi salvo.')
+          if html.count('class="interest"') != 73:
+              raise RuntimeError('Nem todos os cards receberam WhatsApp. Site nao foi salvo.')
+
+          hero_old = 'https://wa.me/5514981566949?text=Olá%20Rogério,%20vim%20pelo%20seu%20site.'
+          hero_msg = 'Olá, Rogério. Vim pelo seu site e estou procurando um imóvel para comprar. Pode me ajudar?'
+          html = html.replace(hero_old, f'https://wa.me/{phone}?text={quote(hero_msg)}')
+
+          cta_old = 'https://wa.me/5514981566949?text=Olá%20Rogério,%20quero%20falar%20sobre%20um%20imóvel.'
+          cta_msg = 'Olá, Rogério. Estou procurando um imóvel para comprar e gostaria de conhecer as opções disponíveis.'
+          html = html.replace(cta_old, f'https://wa.me/{phone}?text={quote(cta_msg)}')
+
+          footer_old = 'href="https://wa.me/5514981566949"'
+          footer_msg = 'Olá, Rogério. Vim pelo seu site e gostaria de falar sobre um imóvel.'
+          html = html.replace(footer_old, f'href="https://wa.me/{phone}?text={quote(footer_msg)}"')
+
+          path.write_text(html, encoding='utf-8')
+          print(f'Conversao aplicada a {count} cards.')
+
+      - name: Commit da atualizacao
+        run: |
+          if git diff --quiet; then
+            echo "Nada para atualizar"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Add contextual WhatsApp conversion to property cards"
+          git push
