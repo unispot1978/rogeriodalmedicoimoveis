@@ -1,0 +1,79 @@
+name: Criar paginas SEO de alta intencao
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/seo-pages.yml'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Gerar paginas especificas e sitemap
+        shell: python
+        run: |
+          import re, html, urllib.parse, pathlib, datetime
+          root=pathlib.Path('.')
+          src=(root/'index.html').read_text(encoding='utf-8')
+          # Parse cards already approved on homepage; pages reuse exact listing data/photos/links.
+          sections={}
+          matches=list(re.finditer(r'<section class="properties" id="([^"]+)">',src))
+          for i,m in enumerate(matches):
+              end=matches[i+1].start() if i+1<len(matches) else src.find('<section class="cta"',m.start())
+              block=src[m.start():end if end!=-1 else len(src)]
+              cards=re.findall(r'<article class="card">.*?</article>',block,re.S)
+              sections[m.group(1)]=cards
+          allcards=sum(sections.values(),[])
+          def field(card,pat):
+              x=re.search(pat,card,re.S); return html.unescape(re.sub('<.*?>','',x.group(1)).strip()) if x else ''
+          def info(card):
+              return {'html':card,'title':field(card,r'<h3>(.*?)</h3>'),'loc':field(card,r'<p class="loc">(.*?)</p>'),'code':field(card,r'<span class="code">(.*?)</span>')}
+          infos=[info(c) for c in allcards]
+          def norm(s):
+              import unicodedata
+              return ''.join(c for c in unicodedata.normalize('NFD',s.lower()) if unicodedata.category(c)!='Mn')
+          # Named house condominiums and apartment buildings inferred only from existing approved card titles/locations.
+          house_cards=[info(c) for c in sections.get('casas',[])]
+          apt_cards=[info(c) for c in sections.get('apartamentos',[])]
+          house_names=['Lago Sul','Villa Dumont','Cyrela Estoril','Villaggio II','Spazio Verde','Samambaia','Villa Lobos','Tamboré','Jardim Colonial','Morada do Sol','Villa de León','Recanto dos Nobres']
+          apt_names=['Córsega','Vivaz','City Towers','Trebbiano','City Towers One','DUO','Infinity','Mont Blanc','Auri Verde','Las Palmas','Cedro','Granja Cecília','Ebel']
+          pages=[]
+          def slug(s):
+              s=norm(s); s=re.sub(r'[^a-z0-9]+','-',s).strip('-'); return s
+          def select(items,term): return [x for x in items if norm(term) in norm(x['title']+' '+x['loc'])]
+          for n in house_names:
+              cs=select(house_cards,n)
+              if cs: pages.append((f'casas-{slug(n)}-bauru',f'Casas no {n} em Bauru',f'Casas à venda no {n} em Bauru',cs,f'Olá, Rogério. Estou procurando uma casa no {n} em Bauru. Gostaria de conhecer as opções disponíveis.'))
+          for n in apt_names:
+              cs=select(apt_cards,n)
+              if cs: pages.append((f'apartamentos-{slug(n)}-bauru',f'Apartamentos no {n} em Bauru',f'Apartamentos à venda no {n} em Bauru',cs,f'Olá, Rogério. Estou procurando um apartamento no {n} em Bauru. Gostaria de conhecer as opções disponíveis.'))
+          categories=[('imoveis-rurais','Imóveis rurais','Imóveis rurais à venda',sections.get('rural',[]),'um imóvel rural'),('imoveis-comerciais-bauru','Imóveis comerciais em Bauru','Imóveis comerciais à venda em Bauru',sections.get('comercial',[]),'um imóvel comercial em Bauru'),('terrenos-a-venda-bauru','Terrenos em Bauru','Terrenos à venda em Bauru',sections.get('terrenos',[]),'um terreno em Bauru')]
+          for sl,t,h,cards,q in categories:
+              cs=[info(c) for c in cards]; pages.append((sl,t,h,cs,f'Olá, Rogério. Estou procurando {q}. Gostaria de conhecer as opções disponíveis.'))
+          for bairro in ['Vila Aviação','Vila Universitária','Jardim Aeroporto','Jardim América']:
+              cs=[x for x in infos if norm(bairro) in norm(x['title']+' '+x['loc'])]
+              pages.append((f'imoveis-{slug(bairro)}-bauru',f'Imóveis na {bairro} em Bauru',f'Imóveis à venda na {bairro} em Bauru',cs,f'Olá, Rogério. Quero comprar um imóvel na {bairro}, em Bauru. Pode me ajudar?'))
+          bairros=[x for x in house_cards if 'bauru' in norm(x['loc'])]
+          pages.append(('casas-em-bairros-bauru','Casas em bairros de Bauru','Casas à venda em bairros de Bauru',bairros,'Olá, Rogério. Estou procurando uma casa em bairro de Bauru. Gostaria de conhecer as opções.'))
+          pages.append(('quero-comprar-em-bauru','Quero comprar um imóvel em Bauru','Quer comprar um imóvel em Bauru?', [x for x in infos if 'bauru' in norm(x['loc'])], 'Olá, Rogério. Quero comprar um imóvel em Bauru e estou decidindo qual é a melhor opção para mim. Pode me ajudar?'))
+          css='''*{box-sizing:border-box}body{margin:0;background:#03182b;color:#fff;font-family:Arial,sans-serif}a{color:inherit;text-decoration:none}.top{padding:22px 5%;border-bottom:1px solid #365067;display:flex;justify-content:space-between;align-items:center}.brand{font:22px Georgia,serif}.hero{padding:64px 5% 40px;background:#061f38}.hero h1{font:40px Georgia,serif;font-weight:400;max-width:850px;margin:0 0 16px}.hero p{color:#c9d3db;max-width:760px;line-height:1.7}.wa{display:inline-block;background:#25D366;padding:13px 18px;border-radius:6px;font-weight:700;margin-top:12px}.wrap{padding:42px 5%}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{display:flex;flex-direction:column;background:#061c30;border:1px solid #35536b;overflow:hidden}.photo{position:relative;height:220px;display:block}.photo img{width:100%;height:100%;object-fit:cover}.code{position:absolute;left:9px;top:9px;background:#03182b;padding:5px 7px;font-size:10px}.body{padding:14px;display:flex;flex-direction:column;flex:1}.body h3{font:19px Georgia,serif;margin:0 0 8px}.loc,.spec{font-size:12px;color:#c5d0d8}.price{font:20px Georgia,serif;margin:5px 0 12px}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.open,.interest{padding:10px;text-align:center;font-size:11px}.open{border:1px solid #6e8ba1}.interest{background:#25D366;font-weight:700;border-radius:4px}.empty{padding:25px;border:1px solid #35536b;color:#c9d3db}.seo{padding:20px 5% 55px;color:#c9d3db;line-height:1.7;max-width:1000px}footer{padding:25px 5%;border-top:1px solid #365067;color:#dce3e8}@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.hero h1{font-size:32px}}@media(max-width:520px){.grid{grid-template-columns:1fr}}'''
+          base='https://rogeriodalmedicoimoveis.com.br'
+          urls=[base+'/']
+          for sl,title,h1,cards,msg in pages:
+              url=f'{base}/{sl}/'; urls.append(url); wa='https://wa.me/5514981566949?text='+urllib.parse.quote(msg)
+              cardhtml='\n'.join(x['html'] for x in cards) if cards else '<div class="empty">Não há imóvel selecionado nesta página neste momento. Fale comigo pelo WhatsApp para receber opções disponíveis e imóveis que possam entrar no mercado.</div>'
+              desc=f'{h1}. Seleção de imóveis e atendimento direto de Rogério Dal Médico, CRECI 138826.'
+              doc=f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)} | Rogério Dal Médico Imóveis</title><meta name="description" content="{html.escape(desc)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{url}"><style>{css}</style></head><body><header class="top"><a class="brand" href="/">ROGÉRIO DAL MÉDICO</a><a class="wa" href="{wa}" target="_blank" rel="noopener">WHATSAPP</a></header><section class="hero"><h1>{html.escape(h1)}</h1><p>Encontre opções selecionadas e fale diretamente comigo para comparar imóveis, valores, localização e disponibilidade.</p><a class="wa" href="{wa}" target="_blank" rel="noopener">QUERO RECEBER OPÇÕES NO WHATSAPP</a></section><main class="wrap"><div class="grid">{cardhtml}</div></main><section class="seo"><h2>{html.escape(title)}</h2><p>Atendimento personalizado para quem já está procurando comprar e quer tomar uma decisão com mais segurança. Além dos imóveis exibidos, posso orientar a busca de acordo com localização, perfil, faixa de valor e objetivo de compra.</p></section><footer>Rogério Dal Médico · CRECI 138826 · Bauru/SP · (14) 98156-6949</footer></body></html>'''
+              d=root/sl; d.mkdir(exist_ok=True); (d/'index.html').write_text(doc,encoding='utf-8')
+          today=datetime.date.today().isoformat()
+          sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+''.join(f'<url><loc>{u}</loc><lastmod>{today}</lastmod></url>\n' for u in urls)+'</urlset>\n'
+          (root/'sitemap.xml').write_text(sitemap,encoding='utf-8')
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Generate high-intent SEO landing pages"
+          git push
