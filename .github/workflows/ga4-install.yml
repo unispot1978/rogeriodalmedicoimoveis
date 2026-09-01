@@ -1,0 +1,77 @@
+name: Instalar GA4 e rastrear WhatsApp
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/ga4-install.yml'
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar GA4 em todas as paginas HTML
+        shell: python
+        run: |
+          import pathlib, re
+          root=pathlib.Path('.')
+          mid='G-MGRKYK9FNN'
+          tag=f'''<!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id={mid}"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){{dataLayer.push(arguments);}}
+            gtag('js', new Date());
+            gtag('config', '{mid}');
+            document.addEventListener('click', function(e) {{
+              const a=e.target.closest('a[href*="wa.me/"],a[href*="whatsapp.com/"]');
+              if(!a) return;
+              const card=a.closest('.card');
+              const code=card?.querySelector('.code')?.textContent?.trim() || '';
+              const title=card?.querySelector('h3')?.textContent?.trim() || '';
+              const price=card?.querySelector('.price')?.textContent?.trim() || '';
+              const location=card?.querySelector('.loc')?.textContent?.trim() || '';
+              let source='other';
+              if(a.classList.contains('hero-wa')) source='hero';
+              else if(a.classList.contains('interest')) source='property_card';
+              else if(a.closest('.cta')) source='cta';
+              else if(a.closest('footer')) source='footer';
+              else if(a.classList.contains('wa')) source='landing_page';
+              gtag('event','whatsapp_click',{{
+                link_url:a.href,
+                click_source:source,
+                property_code:code,
+                property_title:title,
+                property_price:price,
+                property_location:location
+              }});
+            }});
+          </script>'''
+          changed=0
+          for p in root.rglob('*.html'):
+              if '.git' in p.parts: continue
+              s=p.read_text(encoding='utf-8')
+              if mid in s: continue
+              if '</head>' not in s: continue
+              s=s.replace('</head>',tag+'\n</head>',1)
+              p.write_text(s,encoding='utf-8'); changed+=1
+          print('Paginas atualizadas:',changed)
+      - name: Garantir GA4 nas futuras paginas SEO
+        shell: python
+        run: |
+          import pathlib
+          p=pathlib.Path('.github/workflows/seo-pages.yml')
+          s=p.read_text(encoding='utf-8')
+          if "G-MGRKYK9FNN" not in s:
+              old="doc=f'''<!doctype html><html lang=\"pt-BR\"><head>"
+              new="doc=f'''<!doctype html><html lang=\"pt-BR\"><head><script async src=\"https://www.googletagmanager.com/gtag/js?id=G-MGRKYK9FNN\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-MGRKYK9FNN');document.addEventListener('click',function(e){{const a=e.target.closest('a[href*=\\\"wa.me/\\\"],a[href*=\\\"whatsapp.com/\\\"]');if(a)gtag('event','whatsapp_click',{{link_url:a.href,click_source:a.classList.contains('interest')?'property_card':'landing_page'}});}});</script>"
+              s=s.replace(old,new)
+              p.write_text(s,encoding='utf-8')
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Install GA4 and WhatsApp conversion tracking"
+          git push
