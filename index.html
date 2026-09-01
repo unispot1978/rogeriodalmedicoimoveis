@@ -30,7 +30,38 @@ footer{border-top:1px solid #365067;padding:25px 5%;display:flex;align-items:cen
   "areaServed": ["Bauru", "Piratininga", "Agudos"],
   "telephone": "+55 14 98156-6949",
   "sameAs": ["https://www.instagram.com/rogeriodalmedicoimoveis/"]
-}</script></head>
+}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGRKYK9FNN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MGRKYK9FNN');
+  document.addEventListener('click', function(e) {
+    const a=e.target.closest('a[href*="wa.me/"],a[href*="whatsapp.com/"]');
+    if(!a) return;
+    const card=a.closest('.card');
+    const code=card?.querySelector('.code')?.textContent?.trim() || '';
+    const title=card?.querySelector('h3')?.textContent?.trim() || '';
+    const price=card?.querySelector('.price')?.textContent?.trim() || '';
+    const location=card?.querySelector('.loc')?.textContent?.trim() || '';
+    let source='other';
+    if(a.classList.contains('hero-wa')) source='hero';
+    else if(a.classList.contains('interest')) source='property_card';
+    else if(a.closest('.cta')) source='cta';
+    else if(a.closest('footer')) source='footer';
+    else if(a.classList.contains('wa')) source='landing_page';
+    gtag('event','whatsapp_click',{
+      link_url:a.href,
+      click_source:source,
+      property_code:code,
+      property_title:title,
+      property_price:price,
+      property_location:location
+    });
+  });
+</script>
+</head>
 <body>
 <section class="hero">
 <img alt="Rogério Dal Médico - Consultoria Imobiliária" src="assets/hero.png"/>
